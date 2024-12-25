@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255, 107, 107, 0.6), rgba(255, 230, 109, 0.6)),
+                url('src/christmas-season-celebration-illustration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    animation: moveBackground 10s linear infinite;
+}
+
+.message {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5em;
+    margin: 15px 0;
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+    font-family: 'Great Vibes', cursive; /* Stylish font applied */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 10px #ff0000, 0 0 20px #ffff00;
+    }
+    to {
+        text-shadow: 2px 2px 10px #00ff00, 0 0 20px #ff00ff;
+    }
+}
+
+/* Animation for the background image */
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+</style>
+<title>🎄 Merry Christmas</title>
+</head>
+<body>
+    <!-- Audio for Jingle Bells -->
+    <audio autoplay loop>
+        <source src="src/jingle-bells-180036.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="overlay">
+        <div class="message">🎄 Merry Christmas! 🎁</div>
+        <div class="message">🎁 Greetings From 🎁</div>
+        <div class="message">Vishwajit Kumar</div>
+        <div class="message">Garuda Power Private Limited</div>
+    </div>
+</body>
+</html>
